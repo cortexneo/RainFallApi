@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainFallApi", "RainFallApi\RainFallApi.csproj", "{13965055-D458-491D-9BB7-5469CFF20517}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainFallApi.Presentation", "RainFallApi\RainFallApi.Presentation.csproj", "{13965055-D458-491D-9BB7-5469CFF20517}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Presentation", "1.0 Presentation", "{C272CBE4-CB23-4AAD-889F-C623FBF7D47E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0 Data", "2.0 Data", "{CEA3A29B-8BE2-4625-A402-CD087C7A4809}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0 Domain", "3.0 Domain", "{FD421FAC-B4DC-460A-8C3B-5996D20EDBE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainFallApi.Data", "RainFallApi.Data\RainFallApi.Data.csproj", "{EC9B2360-BC89-41DB-B10B-581CF687F9FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainFallApi.Domain", "RainFallApi.Domain\RainFallApi.Domain.csproj", "{84928541-0C58-4BFE-B959-3744024E3462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +25,22 @@ Global
 		{13965055-D458-491D-9BB7-5469CFF20517}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13965055-D458-491D-9BB7-5469CFF20517}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13965055-D458-491D-9BB7-5469CFF20517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC9B2360-BC89-41DB-B10B-581CF687F9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9B2360-BC89-41DB-B10B-581CF687F9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC9B2360-BC89-41DB-B10B-581CF687F9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC9B2360-BC89-41DB-B10B-581CF687F9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84928541-0C58-4BFE-B959-3744024E3462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84928541-0C58-4BFE-B959-3744024E3462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84928541-0C58-4BFE-B959-3744024E3462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84928541-0C58-4BFE-B959-3744024E3462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13965055-D458-491D-9BB7-5469CFF20517} = {C272CBE4-CB23-4AAD-889F-C623FBF7D47E}
+		{EC9B2360-BC89-41DB-B10B-581CF687F9FC} = {CEA3A29B-8BE2-4625-A402-CD087C7A4809}
+		{84928541-0C58-4BFE-B959-3744024E3462} = {FD421FAC-B4DC-460A-8C3B-5996D20EDBE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {551D3621-C667-4475-93D5-55047030469E}
