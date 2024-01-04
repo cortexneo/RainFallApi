@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RainFallApi.Domain.Models\RainFallApi.Domain.Models.csproj" />
+  </ItemGroup>
+
 </Project>
