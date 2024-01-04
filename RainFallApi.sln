@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainFallApi.Data", "RainFal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainFallApi.Domain", "RainFallApi.Domain\RainFallApi.Domain.csproj", "{84928541-0C58-4BFE-B959-3744024E3462}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainFallApi.Domain.Models", "RainFallApi.Domain.Models\RainFallApi.Domain.Models.csproj", "{9712AE0C-C6EA-4E05-8761-72A455551A8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{84928541-0C58-4BFE-B959-3744024E3462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84928541-0C58-4BFE-B959-3744024E3462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84928541-0C58-4BFE-B959-3744024E3462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9712AE0C-C6EA-4E05-8761-72A455551A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9712AE0C-C6EA-4E05-8761-72A455551A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9712AE0C-C6EA-4E05-8761-72A455551A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9712AE0C-C6EA-4E05-8761-72A455551A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{13965055-D458-491D-9BB7-5469CFF20517} = {C272CBE4-CB23-4AAD-889F-C623FBF7D47E}
 		{EC9B2360-BC89-41DB-B10B-581CF687F9FC} = {CEA3A29B-8BE2-4625-A402-CD087C7A4809}
 		{84928541-0C58-4BFE-B959-3744024E3462} = {FD421FAC-B4DC-460A-8C3B-5996D20EDBE7}
+		{9712AE0C-C6EA-4E05-8761-72A455551A8C} = {FD421FAC-B4DC-460A-8C3B-5996D20EDBE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {551D3621-C667-4475-93D5-55047030469E}
