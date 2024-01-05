@@ -4,6 +4,6 @@ namespace RainFallApi.Domain
 {
     public interface IRainFallReaderService
     {
-        Task<HttpResponseMessage> GetRainfallReadings(string stationId, int count = 10);
+        Task<RainfallReadingResponse> GetRainfallReadings(string stationId, int count = 10);
     }
 }

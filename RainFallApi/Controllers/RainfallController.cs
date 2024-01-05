@@ -1,18 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using RainFallApi.Domain;
 using RainFallApi.Domain.Models;
 using Swashbuckle.AspNetCore.Annotations;
 using System.ComponentModel.DataAnnotations;
+using System.Net;
 
 namespace RainFallApi.Presentation.Controllers
 {
+    /// <summary>
+    /// Controller class for Rain Fall Reader Endpoints
+    /// </summary>
     [ApiController]
     [Route("rainfall")]
     public class RainfallController : ControllerBase
     {
         private readonly IRainFallReaderService _rainFallService;
 
+        /// <summary>
+        /// Controller class for Rain Fall Reader Endpoints
+        /// </summary>
         public RainfallController(IRainFallReaderService rainFallService)
         {
             _rainFallService = rainFallService;
@@ -38,35 +44,16 @@ namespace RainFallApi.Presentation.Controllers
         {
             try
             {
-                if (string.IsNullOrEmpty(stationId))
-                {
-                    var errorResponse = new Error
-                    {
-                        Message = "Bad Request",
-                        Detail = new List<ErrorDetail>
-                        {
-                            new() { PropertyName = "stationId", Message = "StationId is required" }
-                        }
-                    };
-                    return BadRequest(errorResponse);
-                }
+                var result = await _rainFallService.GetRainfallReadings(stationId, count);
 
-                var response = await _rainFallService.GetRainfallReadings(stationId, count);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    var responseData = await response.Content.ReadAsStringAsync();
-                    var rainfallReadingResponse = JsonConvert.DeserializeObject<RainfallReadingResponse>(responseData);
-                    return Ok(rainfallReadingResponse);
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    return BadRequest();
-                }
+                return result.Readings != null 
+                    && result.Readings.Count > 0 
+                    ? Ok(result) 
+                    : NotFound();
+            }
+            catch (ArgumentException)
+            {
+                return BadRequest();
             }
             catch (Exception ex)
             {
@@ -78,8 +65,7 @@ namespace RainFallApi.Presentation.Controllers
                         new() { PropertyName = "General", Message = ex.Message }
                     }
                 };
-
-                return StatusCode(500, errorResponse);
+                return StatusCode((int)HttpStatusCode.InternalServerError, errorResponse);
             }
         }
     }
