@@ -7,6 +7,6 @@ namespace RainFallApi.Domain.Models
     public class RainfallReadingResponse
     {
         [JsonProperty("items")]
-        public List<RainfallReading> Readings { get; set; }
+        public List<RainfallReading>? Readings { get; set; }
     }
 }

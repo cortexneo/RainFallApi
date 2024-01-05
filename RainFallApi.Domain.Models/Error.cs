@@ -6,8 +6,8 @@ namespace RainFallApi.Domain.Models
 
     public class Error
     {
-        public string Message { get; set; }
+        public string? Message { get; set; }
 
-        public List<ErrorDetail> Detail { get; set; }
+        public List<ErrorDetail>? Detail { get; set; }
     }
 }
